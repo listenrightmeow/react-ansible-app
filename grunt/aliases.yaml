@@ -1,0 +1,12 @@
+encrypt:
+  - 'copy:vault'
+  - 'vault'
+  - 'setup'
+
+setup:
+  - 'decrypt'
+  - 'envfile'
+
+start:
+  - 'setup'
+  - 'shell:start'
