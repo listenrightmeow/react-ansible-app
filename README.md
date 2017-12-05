@@ -1,4 +1,6 @@
-# B2B Client Dashboard
+# React/Ansible Boilerplate
+
+Clean starting point application for React utilizing Ansible Vault for secrets management. 
 
 ### Installation
 
@@ -6,6 +8,7 @@ The following command manages all installation requirements detailed below
 
 ```
 ./installation.sh
+nvm install
 ```
 
 ### Requirements
@@ -28,11 +31,13 @@ Grunt: application automation and secret management
 Port `8000` is utilized in order to run React in conjunction with the Rails backend application on port `3000`.
 
 ```
+nvm use
 grunt start --env=ENVIRONMENT
 ```
 
 #### Override React PORT
 
 ```
+nvm use
 grunt start --port=PORT
 ```
