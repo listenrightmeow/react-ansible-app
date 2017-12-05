@@ -28,7 +28,7 @@ Grunt: application automation and secret management
 Port `8000` is utilized in order to run React in conjunction with the Rails backend application on port `3000`.
 
 ```
-grunt start
+grunt start --env=ENVIRONMENT
 ```
 
 #### Override React PORT
