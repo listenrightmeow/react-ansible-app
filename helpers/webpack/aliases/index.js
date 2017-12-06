@@ -2,7 +2,7 @@ const cwd = process.cwd();
 const path = require('path');
 const fs = require('fs');
 
-module.exports = (root = `${cwd}`) => {
+module.exports = (root = `${cwd}`, src = 'application/src') => {
   const projectRoot = root;
   const projectScriptDirs = {};
   const getDirectories = (srcpath) => {
@@ -11,7 +11,7 @@ module.exports = (root = `${cwd}`) => {
     });
   };
 
-  ['application'].map((type) => {
+  [src].map((type) => {
     getDirectories(path.join(projectRoot, type)).map((directory) => {
       const key = type === 'stylesheets' ? `stylesheets/${directory}` : directory;
       projectScriptDirs[key] = path.join(projectRoot, type, directory);
