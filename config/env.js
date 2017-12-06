@@ -23,6 +23,7 @@ var dotenvFiles = [
   // results for everyone
   NODE_ENV !== 'test' && `${paths.dotenv}.local`,
   paths.dotenv,
+  `${paths.dotenv}/secrets/.generated/variables.env`
 ].filter(Boolean);
 
 // Load environment variables from .env* files. Suppress warnings using silent
